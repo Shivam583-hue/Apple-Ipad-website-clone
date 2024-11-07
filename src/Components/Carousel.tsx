@@ -11,8 +11,8 @@ import Carousel6 from '../assets/Carousel6.png';
 
 const Carousel = () => {
   const carouselRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const totalSlides = 6;
+  
+
 
   useEffect(() => {
     //@ts-ignore
