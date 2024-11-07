@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
@@ -11,7 +11,7 @@ import Carousel6 from '../assets/Carousel6.png';
 
 const Carousel = () => {
   const carouselRef = useRef(null);
-  
+  const currentIndex = 0;
 
 
   useEffect(() => {
