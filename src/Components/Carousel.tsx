@@ -41,13 +41,7 @@ const Carousel = () => {
     };
   }, []);
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
-  };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
-  };
 
   return (
     <div className="relative rounded-3xl ml-[9%] mt-10 w-[1250px] h-[600px] overflow-hidden">
