@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const C5video = () => {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const handleVideoPlay = () => {
@@ -27,10 +27,14 @@ const C5video = () => {
     };
 
     const videoElement = videoRef.current;
-    videoElement.addEventListener("play", handleVideoPlay);
+    if (videoElement) {
+      videoElement.addEventListener("play", handleVideoPlay);
+    }
 
     return () => {
-      videoElement.removeEventListener("play", handleVideoPlay);
+      if (videoElement) {
+        videoElement.removeEventListener("play", handleVideoPlay);
+      }
     };
   }, []);
 
