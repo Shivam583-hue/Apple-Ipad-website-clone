@@ -20,7 +20,7 @@ const C5video = () => {
           scrollTrigger: {
             trigger: ".c5",
             scrub: 1,
-            start: "bottom bottom",
+            start: "top top",
           },
         }
       );
